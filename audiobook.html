@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="audiobook.css">
+	
+
+	<title>Soramame Audiobook 1.0</title>
+   	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+   	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script type='text/javascript'>
+   		$(window).load(function() {
+   			$(".se-pre-con").fadeOut("slow");;
+   		});
+		
+       </script>
+	</head>
+	<body>
+		
+	    <div class="nav">
+	      <div class="container">
+	        <ul class="pull-left">
+				 <li><a href="index.html">soramame</a></li>
+	          <li><a href="instalations.html">instalations</a></li>
+	          <li><a href="performance.html">performance/animation</a></li>
+			  <li><a href="audiobook.html">audiobook</a></li>
+	        </ul>
+	        <ul class="pull-right">
+	          <li><a href="http://samandreae.com">Sam Andreae</a></li>
+	          <li><a href="https://mioebisublog.wordpress.com">Mio Ebisu</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	    <div class="se-pre-con"></div>
+		
+		    <div class="main">
+ 
+		      <div class="container">
+					    <div class="title1">
+					 <h1>そらまめ</h1>
+					   </div>
+					   <div class="title2">
+					 <h1>SORAMAME</h1>
+			         </div>
+					 <div  class="content">
+				<p>click the picture to look through the book</p>
+				<div id="imageGallery">    
+				    <img id="image" src="audiobookimages/image0.jpeg"  />
+				</div>
+				<p><a target="_blank" href="audiobookfull.html">view full size with audio</a></p>
+				<p><a target="_blank" href="https://soramameaudiobook.bandcamp.com/releases">buy a copy</a>
+			 </div>
+			  </div>
+		    </div>
+
+
+
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+<script>
+
+ $( document ).ready(function() {
+        var images = [
+			"audiobookimages/image1.jpeg",
+            "audiobookimages/image2.jpeg",
+            "audiobookimages/image3.jpeg",
+            "audiobookimages/image4.jpeg",
+			"audiobookimages/image5.jpeg",
+			"audiobookimages/image6.jpeg",
+			"audiobookimages/image7.jpeg",
+			"audiobookimages/image8.jpeg",
+			"audiobookimages/image9.jpeg",
+			"audiobookimages/image10.jpeg",
+			"audiobookimages/image11.jpeg",
+			"audiobookimages/image12.jpeg",
+			"audiobookimages/image13.jpeg",
+			"audiobookimages/image14.jpeg",
+			"audiobookimages/image15.jpeg",
+			"audiobookimages/image0.jpeg",
+			   
+        ];
+
+        var imageIndex = 0;
+
+
+        $("#image").on("click", function(){
+            imageIndex = (imageIndex+1) % (images.length);    
+            $("#image").attr('src', images[imageIndex]);
+        });
+
+        $("#image").attr(images[0]);
+
+    });
+</script>
+</body>
+</html>
